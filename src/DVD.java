@@ -1,8 +1,11 @@
 public class DVD {
+    /**
+     * Class to store details about a DVD and display them.
+     */
     private String title;
     private String director;
-    private int runTime;
-    private float cost;
+    private int runTime; // in minutes
+    private float cost; // in Pounds
 
     /**
      * Constructor method for DVD class. Objects created in this way should use setters to set field values.
@@ -10,8 +13,8 @@ public class DVD {
     public DVD() {
         title = "";
         director = "";
-        runTime = 0; // in minutes
-        cost = 0; // in Pounds.
+        runTime = 0;
+        cost = 0;
     }
 
     /**
@@ -45,26 +48,50 @@ public class DVD {
         this.title = title;
     }
 
+    /**
+     * Accessor for director
+     * @return director string.
+     */
     public String getDirector() {
         return director;
     }
 
+    /**
+     * Mutator for director.
+     * @param director director string.
+     */
     public void setDirector(String director) {
         this.director = director;
     }
 
+    /**
+     * Accessor for runTime.
+     * @return runTime int.
+     */
     public int getRunTime() {
         return runTime;
     }
 
+    /**
+     * Mutator for runTime
+     * @param runTime runTime int.
+     */
     public void setRunTime(int runTime) {
         this.runTime = runTime;
     }
 
+    /**
+     * Accessor for cost.
+     * @return cost float.
+     */
     public float getCost() {
         return cost;
     }
 
+    /**
+     * Mutator for cost
+     * @param cost cost float.
+     */
     public void setCost(float cost) {
         this.cost = cost;
     }
@@ -83,6 +110,9 @@ public class DVD {
         setCost(cost);
     }
 
+    /**
+     * Display method for DVD details.
+     */
     public void displayDetails(){
         System.out.println("Title:" + title);
         System.out.println("Directed by" + director);
