@@ -5,20 +5,20 @@ public class Collection {
      * @param args No params.
      */
 
-    DVD ferrisBueller = new DVD();
-    DVD starWarsIV = new DVD();
-    DVD darkKnight = new DVD();
+    private DVD dvd1_ferrisBueller = new DVD();
+    private DVD dvd2_starWarsIV = new DVD();
+    private DVD dvd3_darkKnight = new DVD();
 
     public static void main(String[] args){
 
 //        test showing that DVD class construction works.
-//        DVD ferrisBueller = new DVD();
-//        ferrisBueller.setTitle("Ferris Bueller's Day Off");
-//        ferrisBueller.setDirector("John Hughes");
-//        ferrisBueller.setRunTime(103);
-//        ferrisBueller.setCost(5);
+//        DVD dvd1_ferrisBueller = new DVD();
+//        dvd1_ferrisBueller.setTitle("Ferris Bueller's Day Off");
+//        dvd1_ferrisBueller.setDirector("John Hughes");
+//        dvd1_ferrisBueller.setRunTime(103);
+//        dvd1_ferrisBueller.setCost(5);
 //
-//        ferrisBueller.displayDetails();
+//        dvd1_ferrisBueller.displayDetails();
     }
 
     /**
@@ -28,8 +28,13 @@ public class Collection {
      * -The Dark Knight
      */
     public Collection(){
-        ferrisBueller.setAll("Ferris Bueller's Day Off", "John Hughes", 103, 5);
-        starWarsIV.setAll("Star Wars - Episode IV: A new Hope", "George Lucas", 125, 5);
-        darkKnight.setAll("The Dark Knight", "Christpher Nolan", 152, 5);
+        setAll();
+    }
+
+
+    public void setAll(){
+        dvd1_ferrisBueller.setAll("Ferris Bueller's Day Off", "John Hughes", 103, 5);
+        dvd2_starWarsIV.setAll("Star Wars - Episode IV: A new Hope", "George Lucas", 125, 5);
+        dvd3_darkKnight.setAll("The Dark Knight", "Christpher Nolan", 152, 5);
     }
 }
