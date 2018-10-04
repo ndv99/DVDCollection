@@ -4,6 +4,20 @@ public class DVD {
     private int runTime;
     float cost;
 
+    public DVD() {
+        title = "";
+        director = "";
+        runTime = 0;
+        cost = 0;
+    }
+
+    public DVD(String title, String director, int runTime, float cost) {
+        this.title = title;
+        this.director = director;
+        this.runTime = runTime;
+        this.cost = cost;
+    }
+
     public String getTitle() {
         return title;
     }
