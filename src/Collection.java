@@ -41,4 +41,16 @@ public class Collection {
         dvd2_starWarsIV.setAll("Star Wars - Episode IV: A new Hope", "George Lucas", 125, 5);
         dvd3_darkKnight.setAll("The Dark Knight", "Christpher Nolan", 152, 5);
     }
+
+    /**
+     * Displays details of all DVDs in collection.
+     */
+    public void displayDetails(){
+        System.out.println("DVD 1:");
+        dvd1_ferrisBueller.displayDetails();
+        System.out.println("\nDVD 2:");
+        dvd2_starWarsIV.displayDetails();
+        System.out.println("DVD 3:");
+        dvd3_darkKnight.displayDetails();
+    }
 }

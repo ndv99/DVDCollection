@@ -21,7 +21,7 @@ public class DVD {
     /**
      * Second constructor method for DVD class. This one takes four args - one for each field.
      *
-     * @param title String for the title of the film
+     * @param title String for the title of the film.
      * @param director String for the director of the film.
      * @param runTime int for film runtime (minutes).
      * @param cost float for the cost of the film (pounds).
