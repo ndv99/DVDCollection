@@ -4,6 +4,9 @@ public class DVD {
     private int runTime;
     private float cost;
 
+    /**
+     * Constructor method for DVD class. Objects created in this way should use setters to set field values.
+     */
     public DVD() {
         title = "";
         director = "";
@@ -11,6 +14,14 @@ public class DVD {
         cost = 0; // in Pounds.
     }
 
+    /**
+     * Second constructor method for DVD class. This one takes four args - one for each field.
+     *
+     * @param title String for the title of the film
+     * @param director String for the director of the film.
+     * @param runTime int for film runtime (minutes).
+     * @param cost float for the cost of the film (pounds).
+     */
     public DVD(String title, String director, int runTime, float cost) {
         this.title = title;
         this.director = director;
