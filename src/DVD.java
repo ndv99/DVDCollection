@@ -49,4 +49,11 @@ public class DVD {
     public void setCost(float cost) {
         this.cost = cost;
     }
+
+    public void setAll(String title, String director, int runTime, float cost){
+        setTitle(title);
+        setDirector(director);
+        setRunTime(runTime);
+        setCost(cost);
+    }
 }
