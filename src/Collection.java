@@ -8,11 +8,13 @@ public class Collection {
     private DVD dvd3_darkKnight = new DVD();
 
     /**
-     * Main method for class. Contains commented-out test code.
+     * Main method for class. Creates a new collection, sets the details of it, and displays details of all DVDs in collection.
+     * Contains commented-out test code.
      * @param args args.
      */
     public static void main(String[] args){
-
+        Collection myCollection = new Collection();
+        myCollection.displayDetails();
 //        test showing that DVD class construction works.
 //        DVD dvd1_ferrisBueller = new DVD();
 //        dvd1_ferrisBueller.setTitle("Ferris Bueller's Day Off");
@@ -50,7 +52,7 @@ public class Collection {
         dvd1_ferrisBueller.displayDetails();
         System.out.println("\nDVD 2:");
         dvd2_starWarsIV.displayDetails();
-        System.out.println("DVD 3:");
+        System.out.println("\nDVD 3:");
         dvd3_darkKnight.displayDetails();
     }
 }

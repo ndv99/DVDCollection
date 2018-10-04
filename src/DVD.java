@@ -117,7 +117,7 @@ public class DVD {
     public void displayDetails(){
         System.out.println("Title:" + title);
         System.out.println("Directed by" + director);
-        System.out.println(runTime + "minutes");
-        System.out.println("£" + cost);
+        System.out.println("Running time: " + runTime + " minutes");
+        System.out.println("Cost: £" + cost);
     }
 }
