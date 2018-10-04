@@ -29,10 +29,18 @@ public class DVD {
         this.cost = cost;
     }
 
+    /**
+     * Accessor for title.
+     * @return title string.
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Mutator for title.
+     * @param title title string.
+     */
     public void setTitle(String title) {
         this.title = title;
     }
@@ -61,10 +69,24 @@ public class DVD {
         this.cost = cost;
     }
 
+    /**
+     * Sets values of all fields in class.
+     * @param title String for the title of the film
+     * @param director String for the director of the film.
+     * @param runTime int for film runtime (minutes).
+     * @param cost float for the cost of the film (pounds).
+     */
     public void setAll(String title, String director, int runTime, float cost){
         setTitle(title);
         setDirector(director);
         setRunTime(runTime);
         setCost(cost);
+    }
+
+    public void displayDetails(){
+        System.out.println(title);
+        System.out.println(director);
+        System.out.println(runTime);
+        System.out.println(cost);
     }
 }

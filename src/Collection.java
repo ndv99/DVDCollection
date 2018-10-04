@@ -14,11 +14,7 @@ public class Collection {
         ferrisBueller.setRunTime(103);
         ferrisBueller.setCost(5);
 
-        // print DVD information. will make method for this later in DVD.
-        System.out.println(ferrisBueller.getTitle());
-        System.out.println(ferrisBueller.getDirector());
-        System.out.println(ferrisBueller.getRunTime());
-        System.out.println(ferrisBueller.getCost());
+        ferrisBueller.displayDetails();
     }
 
     public Collection(){
