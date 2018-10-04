@@ -84,9 +84,9 @@ public class DVD {
     }
 
     public void displayDetails(){
-        System.out.println(title);
-        System.out.println(director);
-        System.out.println(runTime);
-        System.out.println(cost);
+        System.out.println("Title:" + title);
+        System.out.println("Directed by" + director);
+        System.out.println(runTime + "minutes");
+        System.out.println("£" + cost);
     }
 }
