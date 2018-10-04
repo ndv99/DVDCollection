@@ -1,9 +1,7 @@
+/**
+ * Class to hold DVD collection.
+ */
 public class Collection {
-    /**
-     * Class to hold DVD collection.
-     *
-     * @param args No params.
-     */
 
     private DVD dvd1_ferrisBueller = new DVD();
     private DVD dvd2_starWarsIV = new DVD();

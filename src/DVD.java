@@ -1,7 +1,8 @@
+/**
+ * Class to store details about a DVD and display them.
+ */
 public class DVD {
-    /**
-     * Class to store details about a DVD and display them.
-     */
+
     private String title;
     private String director;
     private int runTime; // in minutes
