@@ -2,13 +2,13 @@ public class DVD {
     private String title;
     private String director;
     private int runTime;
-    float cost;
+    private float cost;
 
     public DVD() {
         title = "";
         director = "";
-        runTime = 0;
-        cost = 0;
+        runTime = 0; // in minutes
+        cost = 0; // in Pounds.
     }
 
     public DVD(String title, String director, int runTime, float cost) {
