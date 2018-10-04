@@ -10,13 +10,15 @@ public class Collection {
     private DVD dvd3_darkKnight = new DVD();
 
     /**
-     * Main method for class. Creates a new collection and sets the details of them.
-     * Calls the searchCollection method.
+     * Main method for class. Creates a new collection and sets the details of every DVD.
+     * Displays details of all DVDs.
+     * Calls searchCollection.
      * Contains commented-out test code.
      * @param args args.
      */
     public static void main(String[] args){
         Collection myCollection = new Collection();
+        myCollection.displayDetails();
         myCollection.searchCollection();
 
 //        myCollection.displayDetails();
@@ -65,10 +67,11 @@ public class Collection {
     /**
      * Allows a user to search the collection from the console.
      */
+
     public void searchCollection(){
         Scanner searchScanner = new Scanner(System.in);
         System.out.println("Search for a movie title: ");
-        String search = searchScanner.next();
+        String search = searchScanner.nextLine();
         String dvd1Title = dvd1_ferrisBueller.getTitle();
         String dvd2Title = dvd2_starWarsIV.getTitle();
         String dvd3Title = dvd3_darkKnight.getTitle();
