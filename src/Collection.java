@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Class to hold DVD collection.
  */
@@ -8,13 +10,17 @@ public class Collection {
     private DVD dvd3_darkKnight = new DVD();
 
     /**
-     * Main method for class. Creates a new collection, sets the details of it, and displays details of all DVDs in collection.
+     * Main method for class. Creates a new collection and sets the details of them.
+     * Calls the searchCollection method.
      * Contains commented-out test code.
      * @param args args.
      */
     public static void main(String[] args){
         Collection myCollection = new Collection();
-        myCollection.displayDetails();
+        myCollection.searchCollection();
+
+//        myCollection.displayDetails();
+//
 //        test showing that DVD class construction works.
 //        DVD dvd1_ferrisBueller = new DVD();
 //        dvd1_ferrisBueller.setTitle("Ferris Bueller's Day Off");
@@ -54,5 +60,26 @@ public class Collection {
         dvd2_starWarsIV.displayDetails();
         System.out.println("\nDVD 3:");
         dvd3_darkKnight.displayDetails();
+    }
+
+    /**
+     * Allows a user to search the collection from the console.
+     */
+    public void searchCollection(){
+        Scanner searchScanner = new Scanner(System.in);
+        System.out.println("Search for a movie title: ");
+        String search = searchScanner.next();
+        String dvd1Title = dvd1_ferrisBueller.getTitle();
+        String dvd2Title = dvd2_starWarsIV.getTitle();
+        String dvd3Title = dvd3_darkKnight.getTitle();
+        if (search.equals(dvd1Title)){
+            System.out.println("Found: " + dvd1Title);
+        }else if (search.equals(dvd2Title)){
+            System.out.println("Found: " + dvd2Title);
+        }else if (search.equals(dvd3Title)){
+            System.out.println("Found: " + dvd3Title);
+        }else{
+            System.out.println("No results found.");
+        }
     }
 }
