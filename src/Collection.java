@@ -18,8 +18,7 @@ public class Collection {
      */
     public static void main(String[] args){
         Collection myCollection = new Collection();
-        myCollection.displayDetails();
-        myCollection.searchCollection();
+        myCollection.menu();
 
 //        myCollection.displayDetails();
 //
@@ -83,6 +82,68 @@ public class Collection {
             System.out.println("Found: " + dvd3Title);
         }else{
             System.out.println("No results found.");
+        }
+    }
+
+    /**
+     * Calculates the total value of the collection in pounds.
+     * @return float with the total value.
+     */
+    public float totalValue(){
+        float dvd1_val = dvd1_ferrisBueller.getCost();
+        float dvd2_val = dvd2_starWarsIV.getCost();
+        float dvd3_val = dvd3_darkKnight.getCost();
+        return dvd1_val + dvd2_val + dvd3_val;
+    }
+
+    /**
+     * Calculates the total runtime of the collection in minutes.
+     * @return int of total runtime.
+     */
+    public int totalRunTime(){
+        int dvd1_run = dvd1_ferrisBueller.getRunTime();
+        int dvd2_run = dvd2_starWarsIV.getRunTime();
+        int dvd3_run = dvd3_darkKnight.getRunTime();
+        return dvd1_run + dvd2_run + dvd3_run;
+    }
+
+    /**
+     * Displays an in-console menu with four options:
+     * -Display all DVDs
+     * -Search DVDs
+     * -Display total value
+     * -Display total runtime
+     */
+    public void menu(){
+        Scanner menuScanner = new Scanner(System.in);
+        System.out.println("Menu:");
+        System.out.println();
+        System.out.println("1. Display all DVDs");
+        System.out.println("2. Search DVDs");
+        System.out.println("3. Display total value");
+        System.out.println("4. Display total runtime");
+        System.out.println("9. Exit");
+
+        String menuChoice = menuScanner.nextLine();
+        if (menuChoice.equals("1")){
+            displayDetails();
+            menu();
+        } else if (menuChoice.equals("2")){
+            searchCollection();
+            menu();
+        } else if (menuChoice.equals("3")){
+            float totalVal = totalValue();
+            System.out.println("Total value: £" + totalVal);
+            menu();
+        } else if (menuChoice.equals("4")) {
+            int totalRun = totalRunTime();
+            System.out.println("Total runtime: " + totalRun + "minutes.");
+            menu();
+        } else if (menuChoice.equals("9")){
+            System.exit(1);
+        } else{
+            System.out.println("That input is invalid.");
+            menu();
         }
     }
 }
