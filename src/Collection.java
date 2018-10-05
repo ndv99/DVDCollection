@@ -122,6 +122,7 @@ public class Collection {
         System.out.println("2. Search DVDs");
         System.out.println("3. Display total value");
         System.out.println("4. Display total runtime");
+        System.out.println("9. Exit");
 
         String menuChoice = menuScanner.nextLine();
         if (menuChoice.equals("1")){
@@ -134,10 +135,12 @@ public class Collection {
             float totalVal = totalValue();
             System.out.println("Total value: £" + totalVal);
             menu();
-        } else if (menuChoice.equals("4")){
+        } else if (menuChoice.equals("4")) {
             int totalRun = totalRunTime();
             System.out.println("Total runtime: " + totalRun + "minutes.");
             menu();
+        } else if (menuChoice.equals("9")){
+            System.exit(1);
         } else{
             System.out.println("That input is invalid.");
             menu();
