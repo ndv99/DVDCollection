@@ -85,4 +85,43 @@ public class Collection {
             System.out.println("No results found.");
         }
     }
+
+    /**
+     * Calculates the total value of the collection in pounds.
+     * @return float with the total value.
+     */
+    public float totalValue(){
+        float dvd1_val = dvd1_ferrisBueller.getCost();
+        float dvd2_val = dvd2_starWarsIV.getCost();
+        float dvd3_val = dvd3_darkKnight.getCost();
+        return dvd1_val + dvd2_val + dvd3_val;
+    }
+
+    /**
+     * Displays an in-console menu with four options:
+     * -Display all DVDs
+     * -Search DVDs
+     * -Display total value
+     * -Display total runtime
+     */
+    public void menu(){
+        Scanner menuScanner = new Scanner(System.in);
+        System.out.println("Menu:");
+        System.out.println();
+        System.out.println("1. Display all DVDs");
+        System.out.println("2. Search DVDs");
+        System.out.println("3. Display total value");
+        System.out.println("4. Display total runtime");
+
+        String menuChoice = menuScanner.nextLine();
+        if (menuChoice.equals("1")){
+            displayDetails();
+            menu();
+        } else if (menuChoice.equals("2")){
+            searchCollection();
+            menu();
+        } else if (menuChoice.equals("3")){
+
+        }
+    }
 }
