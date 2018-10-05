@@ -18,8 +18,7 @@ public class Collection {
      */
     public static void main(String[] args){
         Collection myCollection = new Collection();
-        myCollection.displayDetails();
-        myCollection.searchCollection();
+        myCollection.menu();
 
 //        myCollection.displayDetails();
 //
@@ -98,6 +97,17 @@ public class Collection {
     }
 
     /**
+     * Calculates the total runtime of the collection in minutes.
+     * @return int of total runtime.
+     */
+    public int totalRunTime(){
+        int dvd1_run = dvd1_ferrisBueller.getRunTime();
+        int dvd2_run = dvd2_starWarsIV.getRunTime();
+        int dvd3_run = dvd3_darkKnight.getRunTime();
+        return dvd1_run + dvd2_run + dvd3_run;
+    }
+
+    /**
      * Displays an in-console menu with four options:
      * -Display all DVDs
      * -Search DVDs
@@ -121,7 +131,16 @@ public class Collection {
             searchCollection();
             menu();
         } else if (menuChoice.equals("3")){
-
+            float totalVal = totalValue();
+            System.out.println("Total value: £" + totalVal);
+            menu();
+        } else if (menuChoice.equals("4")){
+            int totalRun = totalRunTime();
+            System.out.println("Total runtime: " + totalRun + "minutes.");
+            menu();
+        } else{
+            System.out.println("That input is invalid.");
+            menu();
         }
     }
 }
